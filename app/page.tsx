@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ContractInput } from './contract-input/contractInput';
 
 export default function Home() {
   return (
@@ -17,12 +18,14 @@ export default function Home() {
           height={200}
           className="rounded-lg shadow-lg"
         />
+        <ContractInput/>
       </main>
       <footer className="text-center text-gray-500 text-sm row-start-3">
-        <p>&copy; 2023 AVAX Token Build App. All rights reserved.</p>
+        <p>&copy; 2025 AVAX ERC dashboard app. All rights reserved.</p>
       </footer>
       <div className="absolute bottom-0 left-0 right-0 text-center text-gray-500 text-xs">
         <p>For learning purposes only.</p>
+        
       </div>
     </div>
   );
