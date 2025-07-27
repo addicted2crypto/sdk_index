@@ -1,33 +1,42 @@
 import Image from "next/image";
 import { ContractInput } from './contract-input/ContractInput';
 
+import { ModeToggle } from './toggle-mode/toggle-mode';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1 className="text-4xl font-bold text-center sm:text-left">
-          Welcome to your TOKEN anyalizer.
+    <>
+    
+    <main className="flex p-8">
+      <div className= "flex items-center justify-center gap-6">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center">
+          Welcome to your TOKEN analyzer
         </h1>
-        <p className="text-lg text-gray-700">
+        <p className="text-base sm:text-lg text-gray-700 text-center">
           This app will provide you with all the blockchain data you need.
         </p>
         <Image
           src="/avax-logo.png"
           alt="AVAX Logo"
-          width={200}
-          height={200}
-          className="rounded-lg shadow-lg"
+          width={160}
+          height={160}
+          className="rounded-lg shadow-lg w-32 sm:w-40"
+          priority
         />
-        <ContractInput/>
-      </main>
-      <footer className="text-center text-gray-500 text-sm row-start-3">
-        <p>&copy; 2025 EVM conatract dashboard app. All rights reserved.</p>
-      </footer>
-      <div className="absolute bottom-0 left-0 right-0 text-center text-gray-500 text-xs">
-        <p>For learning purposes only.</p>
-        
+        <ContractInput />
       </div>
-    </div>
-  );
+      <footer className="fixed bottom-0 left-3 right-0 bg-white/80 backdrop-blur-sm p-4">
+        <div className="max-w-md mx-auto p-2.5 gap-4">
+          <ModeToggle />
+          <p className="text-center text-gray-500 text-sm">
+            &copy; 2025 EVM contract dashboard app. All rights reserved.
+          </p>
+          <p className="text-center text-gray-500 text-xs mt-1">
+            For learning purposes only.
+          </p>
+        </div>
+      </footer>
+    </main>
+    </>
+  )
 }
