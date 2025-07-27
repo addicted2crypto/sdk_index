@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ContractInput } from './contract-input/contractInput';
+import { ContractInput } from './contract-input/ContractInput';
+
 
 export default function Home() {
   return (
