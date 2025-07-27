@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { Input } from '@/components/ui/input';
 
 export const ContractInput = () => {
   const [address, setAddress] = useState('')
@@ -30,17 +31,18 @@ export const ContractInput = () => {
   return (
     <div className='max-w-md mx-auto p-4 bg-white shadow-md rounded-lg'>
       <form onSubmit={handleAddressSubmit}>
-        <input
+        <Input
           type="text"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           placeholder="Enter contract address"
-          className="border p-2 rounded w-full focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+          aria-invalid={!!error}
+          className={error ? "border-destructive" : ""}
           />
           {error && (
             <p className="text-red-500 text-sm mt-2">{error}</p>
           )}
-          <Button variant="outline">Button</Button>
+          <Button variant="outline">Check Contract</Button>
       </form>
       </div>
   )
