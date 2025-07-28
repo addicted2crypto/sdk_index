@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from '@/components/ui/input';
 
-export const ContractInput = () => {
+export default function ContractInput() {
   const [address, setAddress] = useState('')
   const [error, setError] = useState('')
 

@@ -1,6 +1,15 @@
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { Header } from "./header/Header";
+import { Geist, Geist_Mono } from "next/font/google";
 
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 export const metadata = {
   title: "Token Analyzer",
   description: "Welcome to your blockchain token indexer",
@@ -12,20 +21,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='h-full'>
-      <body className='min-h-screen h-full bg-background'>
+    <>
+    <html lang='en'suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <div className='flex flex-col items-center justify-center min-h-screen w-full'>
+          
             {children}
-          </div>
+         
         </ThemeProvider>
       </body>
     </html>
+    </>
   );
 }
