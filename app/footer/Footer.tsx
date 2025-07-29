@@ -1,6 +1,6 @@
  
 import React from 'react';
-import { ModeToggle } from '../toggle-mode/toggle-mode';
+import { ModeToggle } from '../components/toggle-mode';
 
 export default function Footer() {
   return (
