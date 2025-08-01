@@ -46,6 +46,8 @@
 
 body {
   margin: 1rem;
+  text-align: center;
+  justify-content: center;
 }
 :root {
   --radius: 0.625rem;
@@ -118,11 +120,11 @@ body {
 .HomePage {
   text-align: center
 }
-/* @layer base {
+@layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
-} */
+}
