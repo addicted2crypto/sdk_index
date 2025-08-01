@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Geist, Geist_Mono } from "next/font/google";
-import Footer from './components/Footer';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
