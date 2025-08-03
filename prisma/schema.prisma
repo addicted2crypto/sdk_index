@@ -18,6 +18,10 @@ datasource db {
 model Token {
   id          String  @id @default(uuid())
   address     String  @unique
+  fromAddress String
+  toAddress   String?
+  value       String
+  type        EventType
   name        String
   symbol      String
   decimals    Int

@@ -6,16 +6,19 @@ import { Header } from './components/Header';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen h-full">
-      <div className="container px-4 py-16 ">
-       <div className='text-center mb-6 mt-10'>
-        <Header />
+    <main className="min-h-screen grid grid-rows-[20px_1fr_20px] items-center jutstify-items-center p-8 pb-20 sm:p-20">
+    
+      <div className="container px-4 py-16 flex items-center justify-between flex-col">
+         <Header />
+       <div className='container items-center text-center gap-4 mb-8'>
+       
         <Image
+        aria-hidden="true"
           src="/avax-logo.png"
           alt="AVAX Logo"
-          width={160}
-          height={160}
-          className="rounded-sm shadow-lg w-32 sm:w-40"
+          width={330}
+          height={330}
+          className="mx-auto"
           priority
         />
         </div>

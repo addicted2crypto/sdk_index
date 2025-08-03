@@ -1,4 +1,5 @@
 "use client";
+import { Button } from '@/components/ui/button';
 import React from "react";
 
 export function Header() {
@@ -14,9 +15,9 @@ export function Header() {
         <div className='fixed top-4 right-4'>
           
           
-          <button>
+          <Button>
             test
-          </button>
+          </Button>
         </div>
         <div />
         <h1 className="text-center text-5xl font-bold mb-6">
