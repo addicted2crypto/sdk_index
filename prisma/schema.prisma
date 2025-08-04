@@ -20,7 +20,7 @@ model Token {
   address     String  @unique
   fromAddress String
   toAddress   String?
-  value       String
+  value       BigInt
   type        EventType
   name        String
   symbol      String
