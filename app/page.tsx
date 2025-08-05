@@ -10,7 +10,7 @@ export default function HomePage() {
     <main className="min-h-screen items-center jutstify-items-center p-8 pb-20">
     
       <header className="min-h-screen sticky top-0 z-50">
-         <Link href="/" className="flex itmes-center gap-2"> 
+         <Link href="/" className="flex items-center gap-2"> 
         
          
          </Link>
