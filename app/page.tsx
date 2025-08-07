@@ -33,9 +33,9 @@ export default function HomePage() {
         aria-hidden="true"
           src="/avax-logo.png"
           alt="AVAX Logo"
-          width={220}
-          height={330}
-          className="justify-center items-center"
+          width={60}
+          height={60}
+          className="ruonded-full"
           priority
         />
         
