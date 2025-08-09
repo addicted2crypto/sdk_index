@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import ContractInput from './components/ContractInput';
 import { Header } from './components/Header';
 import { Link, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
   return (
@@ -46,6 +47,7 @@ export default function HomePage() {
       <div className='pt-10 pb-16'>
         <ContractInput />
       <Footer />
+       
       </div>
     </main>
   )

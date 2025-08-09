@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 export default function ContractInput() {
   const [address, setAddress] = useState('')
   const [error, setError] = useState('')
+  const [searchAddress, setSearchAddress] = useState('')
 
   const validateAddress = (value: string) => {
     // Basic evm address validation will to change here if needed diff than 42
@@ -23,8 +24,8 @@ export default function ContractInput() {
     if (validateAddress(address)) {
       // Will delete this is for testing
       console.log('Valid address submitted:', address)
-      // You can add further logic here, like calling a function to fetch data
-    } else {
+      window.location.href = `/anylitics?address=${searchAddress}`}
+       else {
       console.error('Invalid addres:', address)
     }
   }
@@ -40,10 +41,14 @@ export default function ContractInput() {
           className={error ? "border-destructive" : ""}
           />
           {error && (
-            <p className="text-red-500 text-sm mt-2">{error}</p>
+            <p className="text-red-500 text-sm mt-2">{error}.console.error('Invalid address:', address)
+            </p>
           )}
-          <Button variant="ghost" onClick={handleAddressSubmit}>Check Contract</Button>
+          <Button variant="ghost"type='submit'>Check Contract</Button>
       </form>
+       <Button variant="ghost" className="w-full">
+                  Disconnect Wallet
+                </Button>
       </div>
   )
 }
