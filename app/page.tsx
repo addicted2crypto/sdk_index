@@ -41,9 +41,10 @@ export default function HomePage() {
         
         </div>
         <h1 className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti blanditiis unde aut ratione repudiandae, harum nihil consectetur. Ipsam ex fugit quod ab culpa nam! Harum quod perferendis voluptate nam est.</h1>
-        <ContractInput />
+        
       
       <div className='pt-10 pb-16'>
+        <ContractInput />
       <Footer />
       </div>
     </main>
