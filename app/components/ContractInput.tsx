@@ -42,7 +42,7 @@ export default function ContractInput() {
           {error && (
             <p className="text-red-500 text-sm mt-2">{error}</p>
           )}
-          <Button variant="ghost">Check Contract</Button>
+          <Button variant="ghost" onClick={handleAddressSubmit}>Check Contract</Button>
       </form>
       </div>
   )
