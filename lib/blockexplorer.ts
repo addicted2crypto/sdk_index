@@ -1,4 +1,4 @@
-import { fromTheme } from "tailwind-merge";
+
 
 const SNOWSCAN_API_URL = "https://api.snowtrace.io/api";
 const SNOWSCAN_API_KEY =
